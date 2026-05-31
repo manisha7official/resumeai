@@ -1,0 +1,29 @@
+'use client'
+import { useState } from 'react'
+
+export default function HomePage() {
+  return (
+    <div style={{minHeight:'100vh', background:'linear-gradient(135deg,#f5f7ff,#faf5ff)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', fontFamily:'sans-serif', padding:'20px'}}>
+      <div style={{background:'#7c3aed', borderRadius:'16px', padding:'16px', marginBottom:'24px'}}>
+        <span style={{fontSize:'32px'}}>🧠</span>
+      </div>
+      <h1 style={{fontSize:'48px', fontWeight:'800', color:'#1a1a2e', marginBottom:'16px', textAlign:'center'}}>
+        Resume<span style={{color:'#7c3aed'}}>AI</span>
+      </h1>
+      <p style={{fontSize:'20px', color:'#666', marginBottom:'40px', textAlign:'center', maxWidth:'500px'}}>
+        AI-powered resume screener. Get your ATS score, fix keyword gaps, rewrite bullets — in 30 seconds.
+      </p>
+      <a href="/dashboard" style={{background:'#7c3aed', color:'white', padding:'16px 40px', borderRadius:'12px', fontSize:'18px', fontWeight:'600', textDecoration:'none'}}>
+        Analyze My Resume →
+      </a>
+      <div style={{marginTop:'48px', display:'flex', gap:'40px', textAlign:'center'}}>
+        {[['9.8/10','Recruiter Impact'],['<30s','Analysis Time'],['GPT-4o','AI Engine'],['Free','To Start']].map(([val,label])=>(
+          <div key={label}>
+            <div style={{fontSize:'24px', fontWeight:'700', color:'#7c3aed'}}>{val}</div>
+            <div style={{fontSize:'13px', color:'#999'}}>{label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
